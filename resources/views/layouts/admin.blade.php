@@ -1,13 +1,14 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
+  <title>{{ config('app.name', 'Laravel') }}</title>
   <link rel="stylesheet" href="{{ asset('agents/assets/css/app.min.css') }}">
   <link rel="stylesheet" href="{{ asset('agents/assets/css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('agents/assets/css/components.css') }}">
@@ -16,7 +17,7 @@
 
   <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
   <style>
-    @media (max-width: 900px){
+    @media (max-width: 900px) {
       .hideSidebar {
         display: none !important;
       }
@@ -35,7 +36,7 @@
             <li>
               <a href="#" onclick="document.getElementById('mainsidebar').classList.toggle('hideSidebar')" data-toggle="sidebar" class="nav-link nav-link-lg
 									collapse-btn">
-                  <i style="color: #424242" data-feather="menu"></i>
+                <i style="color: #424242" data-feather="menu"></i>
               </a>
             </li>
             <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
@@ -56,10 +57,9 @@
         <ul class="navbar-nav navbar-right">
 
           <li class="dropdown dropdown-list-toggle">
-            <a href="#" data-toggle="dropdown"
-            class="nav-link nav-link-lg message-toggle">
-            
-              <i style="color: #424242"  data-feather="mail"></i>
+            <a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle">
+
+              <i style="color: #424242" data-feather="mail"></i>
               <message-component :id="6"></message-component>
             </a>
           </li>
@@ -112,13 +112,11 @@
               </div>
             </div>
           </li> -->
-          <li class="dropdown"><a href="#" data-toggle="dropdown"
-              class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-              <img alt="image" src="/agents/assets/img/agent-user-avatar.png"
-                class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+              <img alt="image" src="/agents/assets/img/agent-user-avatar.png" class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
               <div class="dropdown-title">HELLO {{auth()->user()->firstname}}</div>
-             <a href="/agent/profile" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
+              <a href="/agent/profile" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
                 Profile
               </a>
               <div class="dropdown-divider"></div>
@@ -128,15 +126,14 @@
             </div>
           </li>
         </ul>
-        
+
       </nav>
       <div class="main-sidebar sidebar-style-2 hideSidebar" id="mainsidebar">
-        <aside id="sidebar-wrapper" >
+        <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="/agent"> 
+            <a href="/agent">
               <!-- <img alt="image" src="assets/img/logo.png" class="header-logo" />  -->
-              <span
-                class="logo-name">SUNTEX </span>
+              <span class="logo-name">SUNTEX </span>
             </a>
           </div>
           <ul class="sidebar-menu">
@@ -145,8 +142,7 @@
               <a href="/management/admin" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                  data-feather="hexagon"></i><span>Agents</span></a>
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="hexagon"></i><span>Agents</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="/management/admin/agents">All</a></li>
                 <li><a class="nav-link" href="/management/admin/agents/verified">Verified</a></li>
@@ -156,23 +152,20 @@
             </li>
 
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                  data-feather="mail"></i><span>Messages</span></a>
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="mail"></i><span>Messages</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="/management/admin/notifications">Inbox</a></li>
                 <li><a class="nav-link" href="/management/admin/notifications/sent">Sent</a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                  data-feather="briefcase"></i><span>Properties</span></a>
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="briefcase"></i><span>Properties</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="/management/admin/properties">All</a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                  data-feather="briefcase"></i><span>Type</span></a>
+              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="briefcase"></i><span>Type</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="/management/admin/manage-types">All</a></li>
                 <li><a class="nav-link" href="/management/admin/add-type">Add</a></li>
@@ -181,18 +174,18 @@
             <li class="dropdown">
               <a href="/management/admin" class="nav-link"><i data-feather="monitor"></i><span>Deals</span></a>
             </li>
-            
+
           </ul>
         </aside>
       </div>
-        <div class="main-content" onclick="hideSidebar()">
-
-            
+      <div class="main-content" onclick="hideSidebar()">
 
 
-      @yield('agentcontent')
 
-      <div class="settingSidebar">
+
+        @yield('agentcontent')
+
+        <div class="settingSidebar">
           <a href="javascript:void(0)" class="settingPanelToggle"> <i class="fa fa-spin fa-cog"></i>
           </a>
           <div class="settingSidebar-body ps-container ps-theme-default">
@@ -217,13 +210,11 @@
                 <div class="selectgroup selectgroup-pills sidebar-color">
                   <label class="selectgroup-item">
                     <input type="radio" name="icon-input" value="1" class="selectgroup-input select-sidebar">
-                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
-                      data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
+                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip" data-original-title="Light Sidebar"><i class="fas fa-sun"></i></span>
                   </label>
                   <label class="selectgroup-item">
                     <input type="radio" name="icon-input" value="2" class="selectgroup-input select-sidebar" checked>
-                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip"
-                      data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
+                    <span class="selectgroup-button selectgroup-button-icon" data-toggle="tooltip" data-original-title="Dark Sidebar"><i class="fas fa-moon"></i></span>
                   </label>
                 </div>
               </div>
@@ -258,8 +249,7 @@
               <div class="p-15 border-bottom">
                 <div class="theme-setting-options">
                   <label class="m-b-0">
-                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
-                      id="mini_sidebar_setting">
+                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" id="mini_sidebar_setting">
                     <span class="custom-switch-indicator"></span>
                     <span class="control-label p-l-10">Mini Sidebar</span>
                   </label>
@@ -268,8 +258,7 @@
               <div class="p-15 border-bottom">
                 <div class="theme-setting-options">
                   <label class="m-b-0">
-                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input"
-                      id="sticky_header_setting">
+                    <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" id="sticky_header_setting">
                     <span class="custom-switch-indicator"></span>
                     <span class="control-label p-l-10">Sticky Header</span>
                   </label>
@@ -298,41 +287,45 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="{{ asset('assets/js/featherIcons.js') }}"></script>
   <script src="{{ asset('agents/assets/bundles/datatables/datatables.min.js') }}"></script>
-  
-  
+
+
   <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-    
+
   <script>
-      $(document).ready( function () {
-        $.noConflict()
-          $('#dealsTable').DataTable();
+    $(document).ready(function() {
+      $.noConflict()
+      $('#dealsTable').DataTable();
 
-          $(".menu-toggle").on("click", function(){
-            const thisParent = $(this).parent()
-            thisParent.children(".dropdown-menu")[0].classList.toggle("showTipatipa")
-          })
-
-          $(".mydropdownToggle").on("click", function(){
-            const thisParent = $(this).parent()
-            thisParent.children(".dropdown-menu")[0].classList.toggle("showTipatipa")
-          })
-      } );
-    feather.replace();
-    document.getElementById("pricetag").addEventListener("keyup", function(){
-      
-      const $dvalue = parseFloat(document.getElementById("pricetag").value)
-      
-      document.getElementById("priceSpan").textContent = $dvalue.toLocaleString("en-UK", {style: "currency",  currency: "NGN", decimal: 2})
+      $(".menu-toggle").on("click", function() {
+        const thisParent = $(this).parent()
+        thisParent.children(".dropdown-menu")[0].classList.toggle("showTipatipa")
       })
-      function hideSidebar(){
-        const sidebar = document.getElementById('mainsidebar')
-        
-        if (sidebar.classList.contains("hideSidebar")){
-        }else{
-          document.getElementById('mainsidebar').classList.toggle('hideSidebar')
 
-        }
+      $(".mydropdownToggle").on("click", function() {
+        const thisParent = $(this).parent()
+        thisParent.children(".dropdown-menu")[0].classList.toggle("showTipatipa")
+      })
+    });
+    feather.replace();
+    document.getElementById("pricetag").addEventListener("keyup", function() {
+
+      const $dvalue = parseFloat(document.getElementById("pricetag").value)
+
+      document.getElementById("priceSpan").textContent = $dvalue.toLocaleString("en-UK", {
+        style: "currency",
+        currency: "NGN",
+        decimal: 2
+      })
+    })
+
+    function hideSidebar() {
+      const sidebar = document.getElementById('mainsidebar')
+
+      if (sidebar.classList.contains("hideSidebar")) {} else {
+        document.getElementById('mainsidebar').classList.toggle('hideSidebar')
+
       }
+    }
   </script>
 
 
@@ -342,6 +335,5 @@
 
 
 <!-- /management/admin  21 Nov 2019 03:47:04 GMT -->
+
 </html>
-
-
